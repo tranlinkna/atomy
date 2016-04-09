@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Dtn_ConfigTheme>
+            <version>0.0.2</version>
+        </Dtn_ConfigTheme>
+    </modules>
+    <global>
+        <resources>
+            <configtheme_setup>
+                <setup>
+                    <module>Dtn_ConfigTheme</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </configtheme_setup>
+        </resources>
+   </global>
+</config>

@@ -3,3 +3,8 @@ var/
 downloader/
 media/catalog/product/
 app/etc/local.xml
+media/catalog/
+media/downloadable/
+media/xmlconnect/
+media/wysiwyg/.thumbs/
+media/custom_options/
