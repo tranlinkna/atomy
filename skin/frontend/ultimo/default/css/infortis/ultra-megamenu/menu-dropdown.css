@@ -15,8 +15,7 @@
 /* Level 1 only
 -------------------------------------------------------------- */
 .nav-regular li.level0 { float: left; }
-.nav-regular li.level0 > a { padding: 0 12px; font-weight: 600 !important; } /*TODO:holders*/
-.nav-regular li.level0.nav-item--home > a {padding-left: 0;}
+.nav-regular li.level0 > a { padding: 0 15px; font-weight: 600 !important; } /*TODO:holders*/
 .nav-regular li.level0 > a > span { display: inline-block; white-space: nowrap; }
 
 /* Top-level item on hover: pull up the link above the dropdown */
@@ -26,7 +25,7 @@
 }
 
 /* Caret */
-.nav-regular li.level0 > a .caret { opacity: 0.3;}
+.nav-regular li.level0 > a .caret { opacity: 0.75;}
 .nav-regular li.level0.active > a .caret { opacity: 1; }
 .nav-regular li.level0:hover > a .caret { opacity: 1; }
 
@@ -34,10 +33,10 @@
 /* Dropdowns
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
-.nav-regular .nav-holder .dropdown-heading{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+/*.nav-regular .nav-holder .dropdown-heading{*/
+    /*border-top-left-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+/*}*/
 
 /* All levels
 -------------------------------------------------------------- */
@@ -178,15 +177,15 @@
 -------------------------------------------------------------- */
 .nav-regular .classic > .nav-panel--dropdown {
 	margin:0;
-	padding:20px; /*TODO:*/
+	padding:0; /*TODO:*/
 	width:16em;
 	min-width:12em;
-	border-width: 6px;
+	border-width: 0;
 }
 
 /* Level 2+
 -------------------------------------------------------------- */
-.nav-regular .nav-panel li.classic { position: relative; } /* Container of the dropdown has to be relative */
+.nav-regular .nav-panel li.classic { position: relative;text-transform: uppercase;border-bottom: 1px solid rgba(255,255,255,.5);padding: 5px 10px; } /* Container of the dropdown has to be relative */
 .nav-regular .nav-panel li.classic > .nav-panel--dropdown {}
 .nav-regular .nav-panel li.classic:hover > .nav-panel--dropdown {
 	display:block;

@@ -70,7 +70,15 @@
 /* Line breaker */
 .user-menu .line-break-after { clear:both; margin-bottom: 1px; }
 
+/* User group */
+.user-menu .ico-user:after{content: "";display: inline-block;width: 0;height: 0;border: 5px solid transparent;border-bottom:none;border-top-color: #333;vertical-align: baseline;margin-left: 2px;margin-bottom: 4px;}
+.user-group{position: relative;margin-left: 10px;}
+.user-group ul.links{position: absolute;z-index: 9999;width: 150px;background: #fff;top:37px;right:0;border: 1px solid #eaeaea;border-top: none;
+    display: none;}
+.user-group ul.links li{float: none;text-align: right;
+    border-top: 1px solid #eaeaea;line-height: 34px;}
 
+.user-group:hover ul.links{display: block;}
 
 /* Regular header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
@@ -130,7 +138,7 @@
 .header-regular .hp-blocks-holder .hp-block {
 	float:none;
 	display:table-cell;
-	vertical-align:middle;
+	vertical-align:top;
 }
 .header-regular .hp-blocks-holder .hp-block:before,
 .header-regular .hp-blocks-holder .hp-block:after {
@@ -975,6 +983,7 @@
 /* These icons needs to have the same basic styles as standard font icons.
    Except line height - it would override individual size of each icon.
 */
+.ico,
 .form-search .button:before,
 
 .buttons-set .back-link a:before,

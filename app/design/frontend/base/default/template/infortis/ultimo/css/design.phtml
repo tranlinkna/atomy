@@ -199,16 +199,18 @@ p.product-name a:hover
 }
 
 <?php //Special color: ?>
-.list-products .list-products-header a{color:<?php echo $d['header']['cart_counter_color']; ?>}
+.list-products .list-products-header a{color:<?php echo $d['colors']['price_color']; ?>}
+.skip-link .count {
+background-color: <?php echo $d['colors']['price_color']; ?>;
+}
+
 .item-active > a > span{color:<?php echo $d['header']['cart_counter_color']; ?>;}
 .header .caret,
 .nav-regular .mini-cart .caret,
 .nav-regular li.level0 > a .caret{
     border-top-color: <?php echo $d['header']['cart_counter_color']; ?>;
 }
-.skip-link .count {
-	background-color: <?php echo $d['header']['cart_counter_color']; ?>;
-}
+
 
 
 <?php
@@ -854,7 +856,7 @@ span.icon.icon-color-productview <?php //For backward compatibility ?>
 	background-color: <?php echo $d['header']['search_bg_color']; ?>;
 	border-color: <?php echo $d['header']['search_border_color']; ?>;
 }
-.dropdown > .dropdown-heading.cover{background: <?php echo $d['header']['search_border_color']; ?>;}
+.dropdown > .dropdown-heading.cover{background: <?php echo $d['nav']['hover_bg_color']; ?>;}
 
 .form-search .input-text:hover,
 .form-search .input-text:focus

@@ -153,7 +153,14 @@
 		<?php if ($accountLinksHtml): //Account links ?>
 			<div id="account-links-wrapper-regular">
 				<div id="header-account" class="top-links links-wrapper-separators-left skip-content skip-content--style">
-					<?php echo $accountLinksHtml; ?>
+				    <ul class="links user-group">
+                        <li>
+                            <i class="ico ico-user"></i>
+                            <?php echo $accountLinksHtml; ?>
+                        </li>
+				    </ul>
+
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('left-top-links')->toHtml() ?>
 				</div>
 			</div>
 		<?php endif; ?>

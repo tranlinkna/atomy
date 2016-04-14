@@ -1,0 +1,122 @@
+﻿<!--@subject {{var store.getFrontendName()}}: Xác nhận đặt hàng # {{var order.increment_id}} @-->
+
+<style type="text/css">
+    body,td { color:#2f2f2f; font:12px/1.35em Verdana, Verdana, Helvetica, sans-serif; }
+</style>
+
+<body style="background:#ECECEC; font-family:Verdana, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#ECECEC;font:12px/1.35em Verdana, Helvetica, sans-serif;margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+    <td align="center" valign="top" style="padding:20px 0 20px 0;">
+        <!-- [ header starts here] -->
+        <table cellspacing="0" cellpadding="15" border="0" width="650" bgcolor="#FFFFFF" style="border:1px solid #E6E7E9;">
+            <tr>
+                <td valign="top" style="padding:20px 10px; border-bottom:1px solid #ccc"><a href="{{store url=""}}"><img src="{{skin url="images/logo_email.png" _area='frontend'}}" alt="{{var store.getFrontendName()}}"  style="" border="0"/></a></td>
+            </tr>
+        
+        <!-- [ middle starts here] -->
+       
+            <tr>
+                <td valign="top" style="padding:15px 15px 10px;">                   
+                     <h3 style="font-size:18px; line-height:18px; padding:0 0 17px; margin:0; font-weight:normal;">Xin chào {{var order.getBillingAddress().getName()}} ({{var order.getCustomerEmail()}}).</h3>
+                     <p style="margin-top:0px; margin-bottom:5px;">Dưới đây là email tự động xác nhận bạn đã đặt hàng thành công (không cần
+                     trả lời email này)</p>
+                     <p style="margin-top:0px; margin-bottom:5px;"><br>
+                       Chúng tôi sẽ gửi một email cho bạn để xác nhận tình trạng hàng (còn hay
+                       hết) và báo giá vận chuyển (nếu có). Bạn có thể kiểm tra đơn hàng của bạn
+                       bằng cách <a style="color:#e50000;" href="http://canifa.com/customer/account/">đăng nhập bằng tài khoản của bạn</a>.</p>
+                     <p style="margin-top:0px; margin-bottom:5px;"><br>
+                       Nếu bạn có bất cứ câu hỏi nào về đơn hàng, hãy liên hệ với chúng tôi qua:
+                       email: <a href="saleonline@canifa.vn" title="Canifa">saleonline@canifa.vn</a> hoặc gọi cho chúng tôi theo số <strong>04 35772870</strong> (máy lẻ 100 - 102). Hotline <strong style="color:#ff0000;">0934593585</strong>. Các ngày trong tuần từ 8h00 – 17h00."</p>
+                     <p>Dưới đây là xác nhận đơn hàng của bạn.</p>
+
+                    <p style="border-bottom:1px solid #ccc;  padding-bottom:10px; "><strong>Số đơn hàng</strong> #{{var order.increment_id}}-<small>({{var order.getCreatedAtFormated(short)}})</small></p>
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th align="left" width="48.5%" bgcolor="#e50000" style="padding:5px 9px 6px 9px; border:1px solid #DCDCDC; border-bottom:none; line-height:1em;font-size:13px;color:#fff;">Thông tin người mua:</th>
+                            <th width="3%"></th>
+                            <th align="left" width="48.5%" bgcolor="#e50000" style="padding:5px 9px 6px 9px; border:1px solid #DCDCDC; border-bottom:none; line-height:1em;font-size:13px;color:#fff;">Phương thức thanh toán:</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #DCDCDC; border-top:0; background:#f5f5f5;">
+                                {{var order.getBillingAddress().format('html')}}
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #DCDCDC; border-top:0; background:#f5f5f5;">
+                              {{var payment_html}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    {{depend order.getIsNotVirtual()}}
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th align="left" width="48.5%" bgcolor="#e50000" style="padding:5px 9px 6px 9px; border:1px solid #DCDCDC; border-bottom:none; line-height:1em;font-size:13px;color:#fff;">Thông tin vận chuyển:</th>
+                            <th width="3%"></th>
+                            <th align="left" width="48.5%" bgcolor="#e50000" style="padding:5px 9px 6px 9px; border:1px solid #DCDCDC; border-bottom:none; line-height:1em;font-size:13px; color:#fff;">Phương thức vận chuyển:</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #DCDCDC; border-top:0; background:#f5f5f5;">
+                                {{var order.getShippingAddress().format('html')}}
+                                &nbsp;
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign="top" style="padding:7px 9px 9px 9px; border:1px solid #DCDCDC; border-top:0; background:#f5f5f5;">
+                                Chuyển hàng đến địa chỉ yêu cầu <br/>
+                                <strong>Ý kiến về đơn hàng:</strong> {{var order.getGomageCheckoutCustomerComment()}}<br/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    {{/depend}}
+                    {{layout handle="sales_email_order_items" order=$order}}
+                    <br/>
+                    {{var order.getEmailCustomerNote()}}
+                </td>				
+			</tr>
+			<tr>
+				<td style="padding:0 15px 15px;" valign="top">
+					<table cellspacing="0" cellpadding="0" border="0" width="100%">
+						
+						<tbody>
+						
+                             <tr>
+                            <td><p>&nbsp;</p>
+                              <p><em><strong>Lưu ý: </strong></em></p>
+                              <ul>
+                                <li><strong>Hàng đã mua vui lòng không trả lại. </strong></li>
+                                <li><strong>Hàng giảm giá, hàng phụ kiện (trừ khăn len) không được đổi trả hàng.</strong></li>
+                                <li><strong>Hàng nguyên giá áp dụng đổi hàng trong vòng 3 ngày kể từ khi nhận được<br>
+                                  hàng.</strong></li>
+                                <li><strong>Trước khi có mail thông báo về tình trạng đơn hàng (còn hay hết sản phẩm)<br>
+                                  quý khách vui lòng không chuyển tiền thanh toán.</strong></li>
+                              </ul>
+                              <p>&nbsp;</p></td>
+                            </tr>								
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:15px; border-top:1px solid #ccc;">
+							<p style="font-size:12px; color:#000;margin:0 0 15px;">Trân trọng cảm ơn!</p>
+					<p style="font-size:11px; color:#666;margin:0;"><strong>CanifaFashion</strong>
+						
+					</p>
+				</td>
+			</tr>
+        </table>
+    </td>
+</tr>
+</table>
+</div>
+</body>

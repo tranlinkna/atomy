@@ -84,11 +84,11 @@
 
 /* Links with separators (at the left side)
 -------------------------------------------------------------- */
-.links-wrapper-separators-left .links > li { margin-left:-1px; }
+.links-wrapper-separators-left .links > li { padding-left:15px; }
 .links-wrapper-separators-left .links > li > a {
-	background-image:url(../../../images/img/link-separator.png);
-	background-position:left center;
-	background-repeat:no-repeat;
+	/*background-image:url(../../../images/img/link-separator.png);*/
+	/*background-position:left center;*/
+	/*background-repeat:no-repeat;*/
 }
 .links-wrapper-separators-left .links > li.first > a { background-image:none; }
 .links-wrapper-separators-left .links > li.hide-separator > a { background-image:none; }

@@ -628,6 +628,10 @@ p.required,
 .data-table tbody.even tr.border td {}
 .data-table th .tax-flag { /*white-space:nowrap;*/ font-weight:normal; }
 
+.data-table .col-edit,
+.data-table .col-unit-price,
+.data-table .col-total {white-space: nowrap;}
+
 /* Additional classes for mobile devices
 -------------------------------------------------------------- */
 /* Cell title */
@@ -900,6 +904,7 @@ ul.disc ul li { background:url(../images/infortis/_shared/cck/list/bullet-small.
 	max-width:94%;
 	margin:10px 0;
 	text-decoration:none !important;
+	vertical-align: middle;
 }
 /* Fix for Firefox and IE. In regular header, stretch the image to full width.
    Thanks to that, on small screens when logo is scaled down it will not expand its container. */
@@ -916,6 +921,7 @@ ul.disc ul li { background:url(../images/infortis/_shared/cck/list/bullet-small.
 }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 
+.header .logo-wrapper h2{display: inline-block;vertical-align: middle;line-height: 1;font-size: 16px;font-style: italic;color: #00a9e2;margin:0 0 0 10px;}
 
 /* Quick search
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -946,6 +952,7 @@ ul.disc ul li { background:url(../images/infortis/_shared/cck/list/bullet-small.
 	background-color:#fff;
 	overflow:hidden;
 	text-overflow:ellipsis;
+	max-width: 383px;
 }
 
 /* Button */
@@ -1050,8 +1057,6 @@ ul.disc ul li { background:url(../images/infortis/_shared/cck/list/bullet-small.
 	width:300px;
 	padding:25px;
 	text-align:left; /* Because cart can be aligned center */
-	border-radius: 5px;
-	border-top-right-radius: 0;
 }
 
 /* Elements of the cart */
@@ -1778,7 +1783,7 @@ h3.product-name {
 	vertical-align: middle;
 }
 .ratings .rating-box { margin-right:6px; }
-.ratings .amount { white-space:nowrap; font-size:10px; text-transform:uppercase; }
+.ratings .amount { white-space:nowrap; font-size:12px;}
 .ratings .rating-links .separator {
 	display: inline-block;
 	vertical-align: middle;
@@ -1952,7 +1957,7 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
 .addto-links-icons {}
 
 /* If displayed in a group: add margin between icons */
-.addto-links-icons .link-compare { margin-left:3px; }
+.addto-links-icons .link-compare { display: none; }
 .addto-links-icons a { display:block; }
 .addto-links-icons .ic { font-size:16px; }
 
@@ -2187,7 +2192,7 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
 .product-options ul.options-list label { font-weight:normal; }
 .product-options ul.validation-failed { padding:0 7px; }
 .product-options p.note { margin:0; font-size:0.9166em; }
-.product-options p.required { position:absolute; right:0; top:-15px; }
+.product-options p.required { position:absolute; right:0; top:0; }
 
 /*bottom*/
 .product-options-bottom { margin-top:20px; }
@@ -3104,9 +3109,14 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
     margin-top: 14px;
 }
 .footer-bottom .logo img{
-    width: 80px;
+    width: 120px;
     height: auto;
 }
+
+.footer-bottom .company-info {
+    margin: 10px 0;
+}
+
 .footer-bottom .footer-copyright {
     text-transform: uppercase;
     font-size: 0.8em;
@@ -3611,3 +3621,4 @@ body.cms-index-index .breadcrumbs { display:none; }
 .section-line:after,
 .section-title:after
 { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+

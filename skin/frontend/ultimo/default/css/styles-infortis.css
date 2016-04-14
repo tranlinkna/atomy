@@ -51,8 +51,8 @@
 	border-color:#333 transparent transparent;
 }
 .dropdown .caret {
-	opacity:0.3;
-	filter:alpha(opacity=30);
+	opacity:0.75;
+	filter:alpha(opacity=75);
 }
 .dropdown.open .caret {
 	opacity:1;

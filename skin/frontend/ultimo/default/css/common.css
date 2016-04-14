@@ -314,9 +314,9 @@
     border-bottom: none;
 }
 
-.dropdown.open .dropdown-content {
-    margin-top: -1px;
-}
+/*.dropdown.open .dropdown-content {*/
+    /*margin-top: -1px;*/
+/*}*/
 
 
 /* Transitions
@@ -487,3 +487,7 @@ input.input-text, select, textarea,
     right: 0;
 }
 
+/* Icons Theme */
+.ico-user:before {
+    content: "\e230";
+}
