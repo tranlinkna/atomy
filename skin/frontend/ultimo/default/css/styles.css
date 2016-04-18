@@ -254,10 +254,10 @@ p.control input.radio { margin-right:6px; }
 .form-list input.input-text { width:262px; /*244px;*/ }
 .form-list textarea { width:244px; height:10em; }
 .form-list select { width:262px; }
-.form-list li.wide .input-box { /*width:535px;*/ }
-.form-list li.wide input.input-text { /*width:529px;*/ }
-.form-list li.wide textarea { /*width:529px;*/ }
-.form-list li.wide select { /*width:535px;*/ }
+.form-list li.wide .input-box { width:537px; }
+.form-list li.wide input.input-text { width:537px; }
+/*.form-list li.wide textarea { width:537px; }*/
+/*.form-list li.wide select { width:537px; }*/
 .form-list li.additional-row { border-top:1px solid #e5e5e5; margin-top:10px; }
 .form-list li.additional-row .btn-remove { float:right; margin:5px 0 0; }
 .form-list .input-range input.input-text { width:74px; }
@@ -603,7 +603,7 @@ p.required,
 .data-table th,
 .data-table td { padding:10px; }
 .data-table thead { background:none; border-bottom:1px solid #e5e5e5; }
-.data-table thead th { font-weight:bold; vertical-align:bottom; border-right: none; }
+.data-table thead th { font-weight:bold; vertical-align:bottom; border-right: none;white-space: nowrap; }
 .data-table thead th.wrap { white-space:normal; }
 
 .data-table tr.odd td,
@@ -2424,6 +2424,8 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
 .cart .cart-left-column > *,
 .cart .cart-right-column > * { margin-bottom:20px; }
 .cart .cart-right-column { float:right; }
+.cart .shipping,
+.cart .discount{display: none;}
 
 
 /* Cross-sell
@@ -2477,7 +2479,7 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
 .cart .totals { background-color:#f5f5f5; }
 .cart .totals-inner { padding:20px; }
 .cart .totals table { width:100%; }
-.cart .totals td { padding:1px 0px 1px 7px; }
+.cart .totals td { padding:1px 0px 1px 20px; }
 .cart .totals tr.last td {}
 .cart .totals tfoot th { padding:5px 15px 5px 7px; }
 .cart .totals tfoot td { padding-bottom:5px; }
