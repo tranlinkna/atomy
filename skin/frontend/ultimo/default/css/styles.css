@@ -832,7 +832,7 @@ ul.disc ul li { background:url(../images/infortis/_shared/cck/list/bullet-small.
     z-index: 5;
 }
 .header-container,
-..header-container,
+.header-container,
 .header-container3 { background-repeat:repeat; background-position:center top; background-attachment: scroll; }
 .header { padding:0; }
 
@@ -3108,7 +3108,7 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
 .footer-bottom .logo{
-    margin-top: 14px;
+    margin-top: 1px;
 }
 .footer-bottom .logo img{
     width: 120px;
@@ -3512,9 +3512,9 @@ span.required em {
 body.cms-index-index .breadcrumbs { display:none; }
 
 .list-banners > ul {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
     -webkit-column-gap: 0px;
     -moz-column-gap: 0px;
     column-gap: 0px;
@@ -3525,7 +3525,7 @@ body.cms-index-index .breadcrumbs { display:none; }
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid-column;
-    padding: 0 10px 20px;
+    padding: 0 20px;
 }
 
 .list-banners ul > li img {
