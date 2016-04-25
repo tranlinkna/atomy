@@ -832,7 +832,7 @@ ul.disc ul li { background:url(../images/infortis/_shared/cck/list/bullet-small.
     z-index: 5;
 }
 .header-container,
-..header-container,
+.header-container,
 .header-container3 { background-repeat:repeat; background-position:center top; background-attachment: scroll; }
 .header { padding:0; }
 
