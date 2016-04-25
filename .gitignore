@@ -1,6 +1,5 @@
 var/
 .idea/
-downloader/
 media/catalog/product/
 app/etc/local.xml
 media/catalog/
