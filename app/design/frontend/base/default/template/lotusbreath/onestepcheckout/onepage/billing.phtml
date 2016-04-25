@@ -165,7 +165,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="fields">
+                    <li class="fields" style="display: none">
                         <div class="field">
                             <label for="billing:postcode"
                                    class="required"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
@@ -178,7 +178,7 @@
                                 ?>
                                 <input type="text" title="<?php echo $this->__('Zip/Postal Code') ?>"
                                        name="billing[postcode]" id="billing:postcode"
-                                       value="<?php echo $this->escapeHtml($this->getAddress()->getPostcode()) ?>"
+                                       value="<?php echo '1234'.$this->escapeHtml($this->getAddress()->getPostcode()) ?>"
                                        class="<?php echo $changeLocationClass; ?> input-text validate-zip-international <?php echo $this->helper('lotusbreath_onestepcheckout')->getAttributeValidationClass('postcode') ?>"/>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                             <label for="billing:country_id"
                                    class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                             <div class="input-box">
-                                <?php echo $this->getCountryHtmlSelect('billing') ?>
+                                <select name="billing[country_id]" id="billing:country_id" class="validate-select change_location_field update-location-region-class valid" title="Đất nước"><option value="VN">Việt Nam</option></select>
                             </div>
                             <?php
                             $changeLocationClass = '';
