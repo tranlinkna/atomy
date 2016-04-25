@@ -53,7 +53,7 @@
 
 /* Inner wrapper of the dropdown (for additional padding etc.)
 -------------------------------------------------------------- */
-#nav .nav-panel-inner { padding: 23px; } /* Required value in pixels to keep padding consistent in different dropdowns */
+#nav .nav-panel-inner { padding: 10px; } /* Required value in pixels to keep padding consistent in different dropdowns */
 #nav .nav-panel-inner:before,
 #nav .nav-panel-inner:after { display: table; line-height: 0; content: ""; }
 #nav .nav-panel-inner:after { clear: both; }
@@ -75,7 +75,7 @@
 */
 /* All levels
 -------------------------------------------------------------- */
-.nav-regular .mega > .nav-panel--dropdown { margin:0; box-sizing: border-box; border-width: 6px; }
+.nav-regular .mega > .nav-panel--dropdown { margin:0; box-sizing: border-box; border-width:0; }
 
 /* Level 2+
 -------------------------------------------------------------- */
@@ -109,7 +109,7 @@
 }
 
 /* If item is a parent of subcategories, add bottom margin, but romove it if item is a parent of a dropdown */
-.nav-regular .nav-submenu--mega > li.parent > a { margin-bottom: -5px; }
+.nav-regular .nav-submenu--mega > li.parent > a {margin-bottom: 5px;}
 .nav-regular .nav-submenu--mega > li.nav-item--parent  > a { margin-bottom: 0; }
 
 /* Inside mega dropdown, level 1: submenu
@@ -185,7 +185,7 @@
 
 /* Level 2+
 -------------------------------------------------------------- */
-.nav-regular .nav-panel li.classic { position: relative;text-transform: uppercase;border-bottom: 1px solid rgba(255,255,255,.5);padding: 5px 10px; } /* Container of the dropdown has to be relative */
+.nav-regular .nav-panel li.classic { position: relative;text-transform: uppercase;border-bottom: 1px solid rgba(255,255,255,.5);padding: 2px; } /* Container of the dropdown has to be relative */
 .nav-regular .nav-panel li.classic > .nav-panel--dropdown {}
 .nav-regular .nav-panel li.classic:hover > .nav-panel--dropdown {
 	display:block;
