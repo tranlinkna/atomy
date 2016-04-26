@@ -80,6 +80,36 @@
 
 .user-group:hover ul.links{display: block;}
 
+
+    .header-mobile .top-links > ul.links{
+        display: none;
+    }
+
+.header-mobile .top-links ul.links.user-group {
+        position: static;
+        margin-left: 0;
+        display: block;
+    }
+
+    .header-mobile .user-group .ico-user{display: none;}
+
+    .header-mobile  .user-group ul.links{
+        position: static;
+        background: inherit;
+        display: block;
+        border: none;
+        width: 100%;
+    }
+
+    .header-mobile .user-group ul.links li{
+        border: none;
+        text-align: left;
+    }
+
+    .header-mobile .links-wrapper-separators-left .links > li{padding-left: 0;}
+
+
+
 /* Regular header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
