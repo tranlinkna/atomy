@@ -18,7 +18,8 @@
 }
 
 .aw-blog-read-more{color: #faa43d;margin-left:10px;}
-.aw-blog-read-more:before{content:"\e263";font-family: ThemeIcons;line-height: 1;vertical-align: middle;display: inline-block;margin: -2px -2px 0 0;font-size: 20px;}
+.aw-blog-read-more:before{content:" ";display: block;}
+.aw-blog-read-more:after{content:"\e263";font-family: ThemeIcons;line-height: 1;vertical-align: middle;display: inline-block;margin: -2px -2px 0 0;font-size: 20px;}
 
 .postTitle {
     margin:15px 0;

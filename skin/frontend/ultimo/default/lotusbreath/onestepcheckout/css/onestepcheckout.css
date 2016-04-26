@@ -173,6 +173,7 @@ div.mage-error, p.mage-error , .error {color : red;}
     height: auto;
 }
 
+#checkout_form .four.columns .form-list li.control{display: none;}
 
 
 .form-list input.input-text  {

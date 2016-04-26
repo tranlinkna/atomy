@@ -185,7 +185,8 @@
 
 /* Level 2+
 -------------------------------------------------------------- */
-.nav-regular .nav-panel li.classic { position: relative;text-transform: uppercase;border-bottom: 1px solid rgba(255,255,255,.5);padding: 2px; } /* Container of the dropdown has to be relative */
+.nav-regular .nav-panel li.classic { position: relative;text-transform: uppercase;border-bottom: 1px solid rgba(255,255,255,.5);padding: 2px 15px; } /* Container of the dropdown has to be relative */
+.nav-regular .nav-submenu--mega .nav-panel li.classic { padding-left: 2px;padding-right: 2px; }
 .nav-regular .nav-panel li.classic > .nav-panel--dropdown {}
 .nav-regular .nav-panel li.classic:hover > .nav-panel--dropdown {
 	display:block;

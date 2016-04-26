@@ -43,6 +43,9 @@
         <reference name="content">
             <block type="blog/blog" name="blog" template="aw_blog/blog.phtml"/>
         </reference>
+        <reference name="left">
+            <remove name="left.reports.product.viewed"/>
+        </reference>
     </blog_index_index>
 
     <blog_index_list>
@@ -68,6 +71,9 @@
                 </block>
             </block>
         </reference>
+        <reference name="left">
+            <remove name="left.reports.product.viewed"/>
+        </reference>
     </blog_post_view>
     <blog_cat_view>
         <reference name="footer" >
@@ -79,6 +85,9 @@
                     <block type="blog/html_pager" name="product_list_toolbar_pager"/>
                 </block>
             </block>
+        </reference>
+        <reference name="left">
+            <remove name="left.reports.product.viewed"/>
         </reference>
     </blog_cat_view>
 
