@@ -4,13 +4,14 @@
     border-bottom:1px solid #e5e5e5;
 }
 
+.blog-cat-view .postWrapper,
 .blog-index-list .postWrapper {
     position: relative;
     padding-left: 220px;
 }
 .image-instead{
     position: absolute;
-    top: 30px;
+    top: 5px;
     left: 0;
     width:200px;
     height: auto;
@@ -131,9 +132,10 @@
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
-.block-blog .menu-tags UL LI {
+.block-blog .menu-tags ul li {
     display: inline;
     padding: 2px;
     margin-left: 10px;
@@ -148,16 +150,14 @@
 }
 
 .block-blog .menu-recent ul li a,
-.block-blog .menu-categories UL LI a,
-.block-blog .menu-tags ul li a {
+.block-blog .menu-categories UL LI a{
     position: relative;
     display: block;
     padding: 3px 0 3px 12px;
 }
 
 .block-blog .menu-recent ul li a:before,
-.block-blog .menu-categories ul li a:before,
-.block-blog .menu-tags ul li a:before {
+.block-blog .menu-categories ul li a:before {
     display: block;
     content: '';
     position: absolute;
@@ -168,8 +168,7 @@
     border-top: 4px solid rgba(0, 0, 0, 0);
     border-bottom: 4px solid rgba(0, 0, 0, 0);
     left: 0px;
-    top: 50%;
-    margin-top: -5px;
+    top: 8px;
     transition: left 150ms ease-in-out;
     -moz-transition: left 150ms ease-in-out;
     -webkit-transition: left 150ms ease-in-out;
@@ -273,3 +272,29 @@ A.awblog_current_comment {
 #postComment .button-set:after{content:"";clear: both;display: block;}
 #postComment .button-set .button.form-button{float: left;}
 #postComment .button-set p{float: right;}
+
+@media only screen and (max-width: 767px) {
+    .blog-cat-view .postWrapper,
+    .blog-index-list .postWrapper {
+        padding-left: 110px;
+        min-height: 120px;
+    }
+
+    .image-instead {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .blog-cat-view .postWrapper,
+    .blog-index-list .postWrapper {
+        position: static;
+        padding-left: 0;
+    }
+
+    .image-instead {
+        position: static;
+        display: block;
+        margin: auto;
+    }
+}
